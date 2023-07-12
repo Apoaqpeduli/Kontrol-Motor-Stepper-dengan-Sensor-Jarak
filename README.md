@@ -13,10 +13,9 @@ Arduino 5V ke + ULN
 Arduino gnd ke - ULN
 
 pin Arduino dan Pin Sensor Ulrasonik
-arduino D2	TRIG
-arduino D3	ECHO
-arduino 5V	VCC
-arduino GND	GND
+arduino 5V ke VCC
+arduino D2 ke out
+arduino GND ke GND
 
 pin arduino dan speaker
 arduino D12 ke + speaker
