@@ -7,7 +7,11 @@
 
 #define MotorInterfaceType 8 
 AccelStepper stepper = AccelStepper(MotorInterfaceType, MP1, MP3, MP2, MP4);
-const int SPR = 2048;//Steps per revolution
+const int SPR = 2048;//360
+//const int SPR = 1024;//180
+//const int SPR = 512;//90
+//const int SPR = 256; //45
+//const int SPR = 128;//22.5
 
 void setup() {
   stepper.setMaxSpeed(1000);//kecepatan maximum 
@@ -15,10 +19,10 @@ void setup() {
 }
 
 void loop() {
-  stepper.moveTo(3*SPR); 
+  stepper.moveTo(SPR); 
   stepper.runToPosition();
   delay(1000);
-  stepper.moveTo(-3*SPR);
+  stepper.moveTo(SPR);
   stepper.runToPosition();
   delay(1000);
 }
