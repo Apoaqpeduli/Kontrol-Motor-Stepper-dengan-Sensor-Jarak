@@ -19,9 +19,17 @@ void setup() {
 }
 
 void loop() {
-  for (int a = 0; a <= 100; a ? ++) {
+  for (int a = 0; a <= 100; a ++) {
     stepper.moveTo(SPR);
     stepper.runToPosition();
     delay(1000);
   }
+
+  for (int a = 0; a <= 100; a ++) {
+    stepper.moveTo(-1*SPR);
+    stepper.runToPosition();
+    delay(1000);
+  }
+
+  
 }
