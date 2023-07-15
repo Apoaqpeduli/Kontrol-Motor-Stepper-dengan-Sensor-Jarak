@@ -40,6 +40,8 @@ void checkSensor() {
         putar = 1;
         return;
       }
+      Serial.print("posisi motor:");
+      Serial.println(motor);
       motor += SPR;
       stepper.move(SPR);
       stepper.runToPosition();
