@@ -33,7 +33,7 @@ void loop() {
 void checkSensor() {
   kondisi = digitalRead(pinPir);
 
-  if (kondisi == 0) {
+  if (kondisi == 1) {
     //motor gerak
     if (putar == 0) { //putar kanan
       if (motor == 180) {
