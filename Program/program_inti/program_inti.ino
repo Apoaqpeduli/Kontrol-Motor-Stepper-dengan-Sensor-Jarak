@@ -33,13 +33,15 @@ void loop() {
 void checkSensor() {
   kondisi = digitalRead(pinPir);
 
-  if (kondisi == 0) {
+  if (kondisi == 1) {
     //motor gerak
     if (putar == 0) { //putar kanan
       if (motor == 180) {
         putar = 1;
         return;
       }
+      Serial.print("posisi motor:");
+      Serial.println(motor);
       motor += SPR;
       stepper.move(SPR);
       stepper.runToPosition();
