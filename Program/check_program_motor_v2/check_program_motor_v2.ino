@@ -35,6 +35,7 @@ void checkSensor() {
         putar = 1;
         return;
       }
+      Serial.println("kiri");
       motor += SPR;
       stepper.moveTo(motor);
       stepper.runToPosition();
@@ -44,10 +45,12 @@ void checkSensor() {
         putar = 0;
         return;
       }
+      Serial.println("kanan");
       motor -= SPR;
       stepper.moveTo(motor);
       stepper.runToPosition();
     }
+    Serial.println(motor);
     delay(1000);
     
 }
