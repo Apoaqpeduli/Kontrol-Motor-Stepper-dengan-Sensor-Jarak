@@ -21,3 +21,8 @@ pin arduino dan speaker
 arduino D12 ke + speaker
 arduino gnd ke - speaker
 
+pin arduino dan lcd i2c
+arduino 5v ke VCC lcd
+arduino gnd ke GND lcd
+arduino A4 ke sda lcd
+arduino A5 ke scl lcd
